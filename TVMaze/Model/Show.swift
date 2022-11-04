@@ -3,6 +3,8 @@ import Foundation
 struct Show: Identifiable, Hashable, Decodable {
     let id: Int
     let name: String
+    let summary: String
+    let genres: [String]
     let image: ShowImage
     
     static func == (lhs: Show, rhs: Show) -> Bool {
