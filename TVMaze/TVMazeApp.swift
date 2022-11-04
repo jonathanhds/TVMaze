@@ -4,7 +4,9 @@ import SwiftUI
 struct TVMazeApp: App {
 	var body: some Scene {
 		WindowGroup {
-			ContentView()
+			NavigationStack {
+				ShowListView()
+			}
 		}
 	}
 }
