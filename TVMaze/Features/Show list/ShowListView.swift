@@ -8,7 +8,12 @@ struct ShowListView: View {
 	var body: some View {
 		Group {
 			List(viewModel.shows) { show in
-				ShowRow(show: show)
+				NavigationLink(value: show) {
+					ShowRow(show: show)
+				}
+			}
+			.navigationDestination(for: Show.self) { show in
+				ShowDetailsView(show: show)
 			}
 		}
 		.navigationTitle("Shows")
