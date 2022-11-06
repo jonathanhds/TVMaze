@@ -21,9 +21,6 @@ struct ShowDetailsView: View {
                 }
 
                 VStack(spacing: 16) {
-                    Text(viewModel.name)
-                        .font(.title)
-
                     Text(viewModel.genres)
                         .font(.caption)
 
@@ -42,8 +39,10 @@ struct ShowDetailsView: View {
                         ScrollView(.horizontal) {
                             HStack(spacing: 10) {
                                 ForEach(season.episodes) { episode in
-                                    EpisodeCell(episode: episode)
-                                        .frame(width: 100)
+                                    NavigationLink(value: episode) {
+                                        EpisodeCell(episode: episode)
+                                            .frame(width: 100)
+                                    }
                                 }
                             }
                         }
@@ -52,6 +51,7 @@ struct ShowDetailsView: View {
                 .padding([.leading, .trailing, .bottom])
             }
         }
+        .navigationTitle(viewModel.name)
         .task {
             await viewModel.fetchEpisodes()
         }

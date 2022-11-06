@@ -24,6 +24,8 @@
 		ABB6A69729183D2500C4541D /* Episode.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB6A69629183D2500C4541D /* Episode.swift */; };
 		ABB6A6992918402A00C4541D /* Season.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB6A6982918402A00C4541D /* Season.swift */; };
 		ABB6A69B291847B600C4541D /* EpisodeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB6A69A291847B600C4541D /* EpisodeCell.swift */; };
+		ABB6A69E2918492100C4541D /* EpisodeDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB6A69D2918492100C4541D /* EpisodeDetailsView.swift */; };
+		ABB6A6A02918493C00C4541D /* EpisodeDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB6A69F2918493C00C4541D /* EpisodeDetailsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +66,8 @@
 		ABB6A69629183D2500C4541D /* Episode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Episode.swift; sourceTree = "<group>"; };
 		ABB6A6982918402A00C4541D /* Season.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Season.swift; sourceTree = "<group>"; };
 		ABB6A69A291847B600C4541D /* EpisodeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeCell.swift; sourceTree = "<group>"; };
+		ABB6A69D2918492100C4541D /* EpisodeDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeDetailsView.swift; sourceTree = "<group>"; };
+		ABB6A69F2918493C00C4541D /* EpisodeDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeDetailsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +183,7 @@
 		AB102C72291589A600A25E89 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				ABB6A69C2918490E00C4541D /* Episode details */,
 				AB102C7A29158E8200A25E89 /* Show details */,
 				AB102C73291589AD00A25E89 /* Show list */,
 			);
@@ -211,6 +216,15 @@
 				AB102C802915965E00A25E89 /* String+HTML.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		ABB6A69C2918490E00C4541D /* Episode details */ = {
+			isa = PBXGroup;
+			children = (
+				ABB6A69D2918492100C4541D /* EpisodeDetailsView.swift */,
+				ABB6A69F2918493C00C4541D /* EpisodeDetailsViewModel.swift */,
+			);
+			path = "Episode details";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -347,11 +361,13 @@
 				AB102C812915965E00A25E89 /* String+HTML.swift in Sources */,
 				AB102C77291589CF00A25E89 /* ShowListViewModel.swift in Sources */,
 				AB102C7C29158E9200A25E89 /* ShowDetailsView.swift in Sources */,
+				ABB6A69E2918492100C4541D /* EpisodeDetailsView.swift in Sources */,
 				ABB6A6992918402A00C4541D /* Season.swift in Sources */,
 				AB102C6B291585BD00A25E89 /* ContentImage.swift in Sources */,
 				ABB6A69729183D2500C4541D /* Episode.swift in Sources */,
 				AB102C7929158B8500A25E89 /* ShowRow.swift in Sources */,
 				AB102C75291589BA00A25E89 /* ShowListView.swift in Sources */,
+				ABB6A6A02918493C00C4541D /* EpisodeDetailsViewModel.swift in Sources */,
 				AB102C3E2915820000A25E89 /* TVMazeApp.swift in Sources */,
 				AB102C6E291585FB00A25E89 /* API.swift in Sources */,
 				AB102C7E29158F9300A25E89 /* ShowDetailsViewModel.swift in Sources */,

@@ -15,8 +15,7 @@ struct EpisodeCell: View {
 
             Text(episode.name)
                 .font(.caption)
-                .fixedSize()
-                .frame(width: 100)
+                .lineLimit(1)
                 .truncationMode(.tail)
         }
     }
