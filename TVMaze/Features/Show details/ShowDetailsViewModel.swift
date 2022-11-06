@@ -12,13 +12,17 @@ class ShowDetailsViewModel: ObservableObject {
     
     var name: String { show.name }
 
-    var summary: String { show.summary.htmlToString ?? "" }
+    var summary: String { show.summary.stripHTMLTags ?? "" }
 
     var genres: String { show.genres.joined(separator: ", ") }
 
     var imageURL: URL? {
         guard let image = show.image else { return nil }
         return URL(string: image.original)
+    }
+
+    var hasSeasons: Bool {
+        seasons.count > 0
     }
 
     init(show: Show, api: API = API()) {

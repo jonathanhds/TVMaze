@@ -6,7 +6,7 @@ class EpisodeDetailsViewModel: ObservableObject {
 
     var name: String { episode.name }
 
-    var summary: String { episode.summary.htmlToString ?? "" }
+    var summary: String { episode.summary.stripHTMLTags ?? "" }
 
     var season: Int { episode.season }
 

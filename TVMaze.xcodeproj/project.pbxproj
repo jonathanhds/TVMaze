@@ -27,6 +27,7 @@
 		ABB6A69E2918492100C4541D /* EpisodeDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB6A69D2918492100C4541D /* EpisodeDetailsView.swift */; };
 		ABB6A6A02918493C00C4541D /* EpisodeDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB6A69F2918493C00C4541D /* EpisodeDetailsViewModel.swift */; };
 		ABB6A6A2291855EC00C4541D /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB6A6A1291855EC00C4541D /* SearchResult.swift */; };
+		ABB6A6A5291869CC00C4541D /* String+HTMLTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB6A6A4291869CC00C4541D /* String+HTMLTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		ABB6A69D2918492100C4541D /* EpisodeDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeDetailsView.swift; sourceTree = "<group>"; };
 		ABB6A69F2918493C00C4541D /* EpisodeDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeDetailsViewModel.swift; sourceTree = "<group>"; };
 		ABB6A6A1291855EC00C4541D /* SearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
+		ABB6A6A4291869CC00C4541D /* String+HTMLTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+HTMLTests.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +144,7 @@
 		AB102C4D2915820100A25E89 /* TVMazeTests */ = {
 			isa = PBXGroup;
 			children = (
+				ABB6A6A3291869BD00C4541D /* Extensions */,
 				AB102C6F2915889B00A25E89 /* API */,
 			);
 			path = TVMazeTests;
@@ -228,6 +231,14 @@
 				ABB6A69F2918493C00C4541D /* EpisodeDetailsViewModel.swift */,
 			);
 			path = "Episode details";
+			sourceTree = "<group>";
+		};
+		ABB6A6A3291869BD00C4541D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				ABB6A6A4291869CC00C4541D /* String+HTMLTests.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -384,6 +395,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB102C71291588A400A25E89 /* APITests.swift in Sources */,
+				ABB6A6A5291869CC00C4541D /* String+HTMLTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -28,27 +28,29 @@ struct ShowDetailsView: View {
                 }
                 .padding()
 
-                VStack(alignment: .leading, spacing: 16) {
-                    Text("Episodes")
-                        .font(.title2)
+                if viewModel.hasSeasons {
+                    VStack(alignment: .leading, spacing: 16) {
+                        Text("Episodes")
+                            .font(.title2)
 
-                    ForEach(viewModel.seasons) { season in
-                        Text("Season \(season.number)")
-                            .font(.title3)
+                        ForEach(viewModel.seasons) { season in
+                            Text("Season \(season.number)")
+                                .font(.title3)
 
-                        ScrollView(.horizontal) {
-                            HStack(spacing: 10) {
-                                ForEach(season.episodes) { episode in
-                                    NavigationLink(value: episode) {
-                                        EpisodeCell(episode: episode)
-                                            .frame(width: 100)
+                            ScrollView(.horizontal) {
+                                HStack(spacing: 10) {
+                                    ForEach(season.episodes) { episode in
+                                        NavigationLink(value: episode) {
+                                            EpisodeCell(episode: episode)
+                                                .frame(width: 100)
+                                        }
                                     }
                                 }
                             }
                         }
                     }
+                    .padding([.leading, .trailing, .bottom])
                 }
-                .padding([.leading, .trailing, .bottom])
             }
         }
         .navigationTitle(viewModel.name)
