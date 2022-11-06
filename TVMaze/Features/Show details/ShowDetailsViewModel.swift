@@ -16,7 +16,10 @@ class ShowDetailsViewModel: ObservableObject {
 
     var genres: String { show.genres.joined(separator: ", ") }
 
-    var imageURL: URL? { URL(string: show.image.original) }
+    var imageURL: URL? {
+        guard let image = show.image else { return nil }
+        return URL(string: image.original)
+    }
 
     init(show: Show, api: API = API()) {
         self.show = show

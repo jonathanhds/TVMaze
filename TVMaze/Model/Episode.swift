@@ -5,7 +5,7 @@ struct Episode: Identifiable, Decodable, Hashable, Comparable {
     let name: String
     let season: Int
     let number: Int
-    let image: ContentImage
+    let image: ContentImage?
     let summary: String
 
     static func == (lhs: Episode, rhs: Episode) -> Bool {

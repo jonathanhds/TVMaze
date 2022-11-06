@@ -4,9 +4,14 @@ struct ShowRow: View {
 
     let show: Show
 
+    private var imageURL: URL? {
+        guard let image = show.image else { return nil }
+        return URL(string: image.original)
+    }
+
     var body: some View {
         HStack(spacing: 10) {
-            AsyncImage(url: URL(string: show.image.original)) { image in
+            AsyncImage(url: imageURL) { image in
                 image
                     .resizable()
                     .aspectRatio(contentMode: .fit)

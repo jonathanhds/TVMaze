@@ -3,9 +3,14 @@ import SwiftUI
 struct EpisodeCell: View {
     let episode: Episode
 
+    var imageURL: URL? {
+        guard let image = episode.image else { return nil }
+        return URL(string: image.medium)
+    }
+
     var body: some View {
         VStack {
-            AsyncImage(url: URL(string: episode.image.medium)) { image in
+            AsyncImage(url: imageURL) { image in
                 image
                     .resizable()
                     .aspectRatio(contentMode: .fit)

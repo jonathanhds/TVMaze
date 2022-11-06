@@ -5,7 +5,7 @@ struct Show: Identifiable, Hashable, Decodable {
     let name: String
     let summary: String
     let genres: [String]
-    let image: ContentImage
+    let image: ContentImage?
 
     static func == (lhs: Show, rhs: Show) -> Bool {
         lhs.id == rhs.id

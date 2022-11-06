@@ -12,7 +12,10 @@ class EpisodeDetailsViewModel: ObservableObject {
 
     var number: Int { episode.number }
 
-    var imageURL: URL? { URL(string: episode.image.original) }
+    var imageURL: URL? {
+        guard let image = episode.image else { return nil }
+        return URL(string: image.original)
+    }
 
     init(episode: Episode) {
         self.episode = episode
