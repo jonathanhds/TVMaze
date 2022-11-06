@@ -2,7 +2,7 @@ import SwiftUI
 
 struct ShowListView: View {
 
-    @ObservedObject
+    @StateObject
     private var viewModel = ShowListViewModel()
 
     var body: some View {
@@ -12,10 +12,10 @@ struct ShowListView: View {
             }
         }
         .navigationDestination(for: Show.self) { show in
-            ShowDetailsView(show: show)
+            ShowDetailsView(viewModel: .init(show: show))
         }
         .navigationDestination(for: Episode.self) { episode in
-            EpisodeDetailsView(episode: episode)
+            EpisodeDetailsView(viewModel: .init(episode: episode))
         }
         .navigationTitle("Shows")
         .searchable(text: $viewModel.searchText)

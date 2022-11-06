@@ -2,12 +2,8 @@ import SwiftUI
 
 struct EpisodeDetailsView: View {
 
-    @ObservedObject
-    private var viewModel: EpisodeDetailsViewModel
-
-    init(episode: Episode) {
-        viewModel = EpisodeDetailsViewModel(episode: episode)
-    }
+    @StateObject
+    var viewModel: EpisodeDetailsViewModel
 
     var body: some View {
         ScrollView(.vertical) {
@@ -36,15 +32,15 @@ struct EpisodeDetailsView: View {
 struct EpisodeDetails_Previews: PreviewProvider {
     static var previews: some View {
         NavigationStack {
-            EpisodeDetailsView(episode: Episode(id: 24,
-                                                name: "Black Ice",
-                                                season: 2,
-                                                number: 11,
-                                                image: ContentImage(medium:
-                                                                        "https://static.tvmaze.com/uploads/images/medium_landscape/4/10456.jpg",
-                                                                    original:
-                                                                        "https://static.tvmaze.com/uploads/images/original_untouched/4/10456.jpg"),
-                                                summary: "<p>When temperatures begin to plunge, Sam and Rebecca spring into action to try to save the residents of Chester's Mill. Meanwhile, Barbie risks his own life in order to save Julia after a terrible accident.</p>"))
+            EpisodeDetailsView(viewModel: .init(episode: Episode(id: 24,
+                                                                 name: "Black Ice",
+                                                                 season: 2,
+                                                                 number: 11,
+                                                                 image: ContentImage(medium:
+                                                                                        "https://static.tvmaze.com/uploads/images/medium_landscape/4/10456.jpg",
+                                                                                     original:
+                                                                                        "https://static.tvmaze.com/uploads/images/original_untouched/4/10456.jpg"),
+                                                                 summary: "<p>When temperatures begin to plunge, Sam and Rebecca spring into action to try to save the residents of Chester's Mill. Meanwhile, Barbie risks his own life in order to save Julia after a terrible accident.</p>")))
         }
     }
 }
