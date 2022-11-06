@@ -1,6 +1,6 @@
 import Foundation
 
-struct ShowImage: Decodable {
+struct ContentImage: Decodable {
     let medium: String
     let original: String
 }

@@ -1,8 +1,14 @@
 import Foundation
 
+@MainActor
 class ShowDetailsViewModel: ObservableObject {
     
     private let show: Show
+
+    private let api: API
+
+    @Published
+    private(set) var seasons: [Season] = []
     
     var name: String { show.name }
 
@@ -12,7 +18,17 @@ class ShowDetailsViewModel: ObservableObject {
 
     var imageURL: URL? { URL(string: show.image.original) }
 
-    init(show: Show) {
+    init(show: Show, api: API = API()) {
         self.show = show
+        self.api = api
+    }
+
+    func fetchEpisodes() async {
+        do {
+            let episodes = try await api.fetchEpisodes(forShowId: show.id)
+            seasons = episodes.groupedBySeason
+        } catch {
+            print(error)
+        }
     }
 }

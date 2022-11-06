@@ -1,10 +1,10 @@
 import SwiftUI
 
 struct ShowListView: View {
-    
+
     @ObservedObject
     private var viewModel = ShowListViewModel()
-    
+
     var body: some View {
         Group {
             List(viewModel.shows) { show in

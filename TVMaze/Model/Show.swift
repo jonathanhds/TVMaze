@@ -5,12 +5,12 @@ struct Show: Identifiable, Hashable, Decodable {
     let name: String
     let summary: String
     let genres: [String]
-    let image: ShowImage
-    
+    let image: ContentImage
+
     static func == (lhs: Show, rhs: Show) -> Bool {
         lhs.id == rhs.id
     }
-    
+
     func hash(into hasher: inout Hasher) {
         hasher.combine(id)
     }
