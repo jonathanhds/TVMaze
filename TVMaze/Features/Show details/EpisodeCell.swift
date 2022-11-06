@@ -30,5 +30,6 @@ struct EpisodeCell_Previews: PreviewProvider {
                                      image: ContentImage(medium: "https://static.tvmaze.com/uploads/images/medium_landscape/1/4388.jpg",
                                                          original: "https://static.tvmaze.com/uploads/images/original_untouched/1/4388.jpg"),
                                      summary: "<p>When the residents of Chester's Mill find themselves trapped under a massive transparent dome with no way out, they struggle to survive as resources rapidly dwindle and panic quickly escalates.</p>"))
+        .previewLayout(.sizeThatFits)
     }
 }

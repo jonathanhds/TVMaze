@@ -4,7 +4,21 @@ import Foundation
 class ShowListViewModel: ObservableObject {
 
     @Published
-    private(set) var shows: [Show] = []
+    var searchText: String = ""
+
+    @Published
+    private var listResults: [Show] = []
+
+    @Published
+    private var searchResults: [Show] = []
+
+    var shows: [Show] {
+        if searchText.isEmpty {
+            return listResults
+        } else {
+            return searchResults
+        }
+    }
 
     private let api: API
 
@@ -14,7 +28,19 @@ class ShowListViewModel: ObservableObject {
 
     func fetchShows() async {
         do {
-            shows = try await api.fetchShows()
+            listResults = try await api.fetchShows()
+        } catch {
+            print(error)
+        }
+    }
+
+    func searchShows() async {
+        do {
+            searchResults = try await api
+                .searchShows(query: searchText)
+                .sorted()
+                .reversed()
+                .map { $0.show }
         } catch {
             print(error)
         }

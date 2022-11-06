@@ -26,6 +26,7 @@
 		ABB6A69B291847B600C4541D /* EpisodeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB6A69A291847B600C4541D /* EpisodeCell.swift */; };
 		ABB6A69E2918492100C4541D /* EpisodeDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB6A69D2918492100C4541D /* EpisodeDetailsView.swift */; };
 		ABB6A6A02918493C00C4541D /* EpisodeDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB6A69F2918493C00C4541D /* EpisodeDetailsViewModel.swift */; };
+		ABB6A6A2291855EC00C4541D /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB6A6A1291855EC00C4541D /* SearchResult.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,7 @@
 		ABB6A69A291847B600C4541D /* EpisodeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeCell.swift; sourceTree = "<group>"; };
 		ABB6A69D2918492100C4541D /* EpisodeDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeDetailsView.swift; sourceTree = "<group>"; };
 		ABB6A69F2918493C00C4541D /* EpisodeDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeDetailsViewModel.swift; sourceTree = "<group>"; };
+		ABB6A6A1291855EC00C4541D /* SearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +160,7 @@
 			children = (
 				AB102C6A291585BD00A25E89 /* ContentImage.swift */,
 				ABB6A69629183D2500C4541D /* Episode.swift */,
+				ABB6A6A1291855EC00C4541D /* SearchResult.swift */,
 				ABB6A6982918402A00C4541D /* Season.swift */,
 				AB102C68291584D300A25E89 /* Show.swift */,
 			);
@@ -359,6 +362,7 @@
 			files = (
 				AB102C69291584D300A25E89 /* Show.swift in Sources */,
 				AB102C812915965E00A25E89 /* String+HTML.swift in Sources */,
+				ABB6A6A2291855EC00C4541D /* SearchResult.swift in Sources */,
 				AB102C77291589CF00A25E89 /* ShowListViewModel.swift in Sources */,
 				AB102C7C29158E9200A25E89 /* ShowDetailsView.swift in Sources */,
 				ABB6A69E2918492100C4541D /* EpisodeDetailsView.swift in Sources */,
